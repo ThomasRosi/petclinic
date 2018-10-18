@@ -1,12 +1,11 @@
 package be.heh.petclinic.component.vet;
 
-import java.util.List;
 import be.heh.petclinic.domain.Vet;
-import be.heh.petclinic.domain.ContentSource;
 
-public interface VetComponent {
+import java.util.List;
 
-  List<Vet> getVets();
+public interface VetComponent{
 
-  List<Vet> getVets(ContentSource contentSource);
+    List<Vet> getVets();
+
 }
