@@ -23,4 +23,16 @@ public class Vet {
   public String getSpeciality() {
       return this.speciality;
   }
+
+  public void setLastName(String lastName){
+    this.lastName = lastName;
+  }
+
+  public void setFirstName(String firstName){
+    this.firstName = firstName;
+  }
+  
+  public void setSpeciality(String speciality){
+    this.speciality = speciality;
+  }
 }
