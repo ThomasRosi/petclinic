@@ -11,11 +11,11 @@ public class VetComponentImpl implements VetComponent {
 
     @Override
     public List<Vet> getVets() {
-        vets.add(new Vet("James","James","none"));
-        vets.add(new Vet("Helen","Helen","radiology"));
-        vets.add(new Vet("Linda","Linda","surgery"));
-
-        return vets;
+      vets.add(new Vet("James","James","none"));
+      vets.add(new Vet("Helen","Helen","radiology"));
+      vets.add(new Vet("Linda","Linda","surgery"));
+      
+      return vets;
     }
 
 
