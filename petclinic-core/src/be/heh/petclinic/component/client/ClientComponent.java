@@ -2,10 +2,10 @@ package be.heh.petclinic.component.client;
 
 import be.heh.petclinic.domain.Client;
 
-import java.util.List;
+import java.util.Collection;
 
 public interface ClientComponent{
 
-    List<Client> getClients();
+    Collection<Client> getClients();
 
 }

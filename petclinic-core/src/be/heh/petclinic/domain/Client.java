@@ -6,14 +6,14 @@ public class Client {
   private String firstName;
   private String address;
   private String email;
-  private String phonenumber;
+  private String phoneNumber;
 
-  public Client(String lastName, String firstName, String address, String email, String phonenumber){
+  public Client(String lastName, String firstName, String address, String email, String phoneNumber){
     this.lastName = lastName;
     this.firstName = firstName;
     this.address = address;
     this.email = email;
-    this.phonenumber = phonenumber;
+    this.phoneNumber = phoneNumber;
   }
 
   public String getLastName() {
@@ -27,10 +27,33 @@ public class Client {
   public String getAddress() {
       return this.address;
   }
+
   public String getEmail() {
     return this.email;
-}
+  }
+
   public String getPhonenumber() {
-    return this.phonenumber;
-}
+    return this.phoneNumber;
+  }
+
+  public void setLastName(String lastName) {
+      this.lastName = lastName;
+  }
+
+  public void setFirstName(String firstName) {
+      this.firstName = firstName;
+  }
+
+  public void setAddress(String Address) {
+      this.address = Address;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public void setPhonenumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
 }
