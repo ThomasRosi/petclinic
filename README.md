@@ -7,3 +7,7 @@ School project created to learn good architecture and some technologies (Java, S
 - [Thibault Stevanoni](https://github.com/thib050697)
 - [Thomas Rosi](https://github.com/ThomasRosi)
 - [Arnaud Urbain](https://github.com/Dexnaw)
+
+## To Execute the backend :
+`$ gradle build`
+`$ gradle bootRun`
