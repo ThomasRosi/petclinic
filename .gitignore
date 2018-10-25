@@ -1,15 +1,11 @@
 /build/
 .vscode
-petclinic-core/build
-petclinic-core/.classpath
-petclinic-core/.settings/
+.settings
 petclinic-core/bin/
 petclinic-core/build/
-petclinic-web/.settings/
 petclinic-web/bin/
 petclinic-web/build/
 .gradle
-/build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -19,3 +15,6 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+
+/.settings

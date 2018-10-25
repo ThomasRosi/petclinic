@@ -12,6 +12,7 @@ repositories {
 }
 
 dependencies {
+  compile group: 'org.springframework', name: 'spring-jdbc', version:'4.1.6.RELEASE'
  	testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
  	testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
