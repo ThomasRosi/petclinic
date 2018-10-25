@@ -1,7 +1,6 @@
 package be.heh.petclinic.component.vet;
 
 import be.heh.petclinic.domain.Vet;
-import be.heh.petclinic.util.JdbcDatabaseConfiguration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
