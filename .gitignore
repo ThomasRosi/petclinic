@@ -5,7 +5,7 @@ petclinic-core/bin/
 petclinic-core/build/
 petclinic-web/bin/
 petclinic-web/build/
-
+.gradle
 
 # Ignore Gradle GUI config
 gradle-app.setting
