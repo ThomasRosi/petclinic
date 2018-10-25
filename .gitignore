@@ -6,7 +6,6 @@ petclinic-core/build/
 petclinic-web/bin/
 petclinic-web/build/
 .gradle
-
 # Ignore Gradle GUI config
 gradle-app.setting
 
@@ -15,6 +14,5 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
-
-
 /.settings
+/.gradle
