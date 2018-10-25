@@ -1,4 +1,4 @@
-package be.heh.be.heh.petclinic.util;
+package be.heh.petclinic.util;
 
 import javax.sql.DataSource;
 

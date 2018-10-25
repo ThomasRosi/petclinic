@@ -1,12 +1,12 @@
 package be.heh.petclinic.component.vet;
 
-import be.heh.be.heh.petclinic.domain.Vet;
+import be.heh.petclinic.domain.Vet;
 import be.heh.petclinic.util.JdbcDatabaseConfiguration;
-import org.springframework.jdbc.core.JdbcTempalte;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
-import java.util.Collections;
-import java.java.util.List;
+import java.util.Collection;
+import java.util.List;
 
 class JdbcVetDao {
   private DataSource dataSource;

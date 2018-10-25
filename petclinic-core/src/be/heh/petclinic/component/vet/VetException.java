@@ -1,10 +1,10 @@
-package be.heh.petclinic.component.badge;
+package be.heh.petclinic.component.vet;
 
 import be.heh.petclinic.util.ComponentException;
 
-public class BadgeException extends ComponentException {
+public class VetException extends ComponentException {
 
-    public BadgeException(String message, Throwable cause) {
+    public VetException(String message, Throwable cause) {
         super(message, cause);
     }
 

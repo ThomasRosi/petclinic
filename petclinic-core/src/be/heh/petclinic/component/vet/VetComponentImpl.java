@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.Collection;
 
 import be.heh.petclinic.domain.Vet;
-import be.heh.petclinic.component.vet;
+import be.heh.petclinic.component.vet.*;
+import be.heh.petclinic.util.*;
 
 class VetComponentImpl implements VetComponent {
 
@@ -21,16 +22,14 @@ class VetComponentImpl implements VetComponent {
       //vets.add(new Vet("James","James","none"));
       //vets.add(new Vet("Helen","Helen","radiology"));
       //vets.add(new Vet("Linda","Linda","surgery"));
-
       try {
-        return Collection<Vet> vets = vetDao.getVets();
+        Collection<Vet> vets = vetDao.getVets();
+        return vets;
       } catch (Exception e) {
         VetException ve = new VetException("Error while loading vets", e);
-        logError(ve);
+        //logError(ve);
         throw ve;
       }
-
-      return vets;
     }
 
 }
