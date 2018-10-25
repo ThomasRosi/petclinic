@@ -6,7 +6,7 @@
 
 
     <bean name="vetComponent" class="be.heh.petclinic.component.vet.VetComponentImpl">
-      <constuctor-arg name="jdbcDatabaseConfiguration" ref="jdbcDatabaseConfiguration"/>
+      <constuctor-arg name="dataSource" ref="dataSource"/>
     </bean>
 
 </beans>

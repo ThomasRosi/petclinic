@@ -3,17 +3,18 @@ package be.heh.petclinic.component.vet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
+import javax.sql.DataSource;
 
 import be.heh.petclinic.domain.Vet;
 import be.heh.petclinic.component.vet.*;
-import be.heh.petclinic.util.*;
+import be.heh.petclinic.util.ComponentException;
 
 class VetComponentImpl implements VetComponent {
 
     private JdbcVetDao vetDao;
 
-    VetComponentImpl(JdbcDatabaseConfiguration jdbcDatabaseConfiguration){
-      this.vetDao = new JdbcVetDao(jdbcDatabaseConfiguration);
+    VetComponentImpl(DataSource dataSource){
+      this.vetDao = new JdbcVetDao(dataSource);
     }
 
     @Override

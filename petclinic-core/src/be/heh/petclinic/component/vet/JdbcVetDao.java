@@ -11,8 +11,8 @@ import java.util.List;
 class JdbcVetDao {
   private DataSource dataSource;
 
-  JdbcVetDao(JdbcDatabaseConfiguration jdbcDatabaseConfiguration){
-    this.dataSource = jdbcDatabaseConfiguration.getDataSource();
+  JdbcVetDao(DataSource dataSource){
+    this.dataSource = dataSource;
   }
 
   Collection<Vet> getVets(){
