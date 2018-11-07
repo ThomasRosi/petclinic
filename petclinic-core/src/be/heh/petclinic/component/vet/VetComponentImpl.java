@@ -32,5 +32,4 @@ class VetComponentImpl implements VetComponent {
         throw ve;
       }
     }
-
 }

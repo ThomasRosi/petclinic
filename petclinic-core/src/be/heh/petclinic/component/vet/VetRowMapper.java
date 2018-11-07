@@ -13,5 +13,4 @@ class VetRowMapper implements RowMapper<Vet> {
         VetResultExtractor extractor = new VetResultExtractor();
         return extractor.extractData(rs);
     }
-
 }
