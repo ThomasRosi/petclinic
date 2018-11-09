@@ -1,4 +1,4 @@
-package be.be.heh.petclinic.component.pet;
+package be.heh.petclinic.component.pet;
 
 import be.heh.petclinic.domain.Pet;
 import org.springframework.jdbc.core.RowMapper;
