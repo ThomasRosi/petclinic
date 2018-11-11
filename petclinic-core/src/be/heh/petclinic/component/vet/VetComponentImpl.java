@@ -19,10 +19,7 @@ class VetComponentImpl implements VetComponent {
 
     @Override
     public Collection<Vet> getVets() {
-      //List<Vet> vets = new ArrayList<>();
-      //vets.add(new Vet("James","James","none"));
-      //vets.add(new Vet("Helen","Helen","radiology"));
-      //vets.add(new Vet("Linda","Linda","surgery"));
+      
       try {
         Collection<Vet> vets = vetDao.getVets();
         return vets;
