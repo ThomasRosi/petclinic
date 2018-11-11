@@ -5,7 +5,7 @@
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean name="vetComponent" class="be.heh.petclinic.component.vet.VetComponentImpl">
-      <constuctor-arg name="dataSource" ref="dataSource"/>
+      <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 
 </beans>
