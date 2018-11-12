@@ -1,17 +1,19 @@
 version: '3'
 services:
   db:
-    image: postgres
+    image: mariadb
     container_name: petclinic_db
     restart: always
     networks:
       - backend
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_520_ci
     environment:
-      POSTGRES_USER: petclinic
-      POSTGRES_PASSWORD: petclinic
-      POSTGRES_DB: petclinic_db
+      MYSQL_ROOT_PASSWORD: petclinic
+      MYSQL_DATABASE: petclinic_db
+      MYSQL_USER: petclinic
+      MYSQL_PASSWORD: petclinic
     ports:
-      - 7000:5432
+      - 7000:3306
 
 networks:
   backend:
