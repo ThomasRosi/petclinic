@@ -19,7 +19,7 @@ class ClientComponentImpl implements ClientComponent {
 
     @Override
     public Collection<Client> getClients() {
-      
+
         try{
             Collection<Client> clients = clientDao.getClients();
             return clients;

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    container_name: petclinic_db
+    restart: always
+    networks:
+      - backend
+    environment:
+      POSTGRES_USER: petclinic
+      POSTGRES_PASSWORD: petclinic
+      POSTGRES_DB: petclinic_db
+    ports:
+      - 7000:5432
+
+networks:
+  backend:

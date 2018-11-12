@@ -2,36 +2,36 @@ package be.heh.petclinic.domain;
 
 public class Vet {
 
-  private String lastName;
-  private String firstName;
+  private String last_name;
+  private String first_name;
   private String speciality;
 
-  public Vet(String lastName, String firstName, String speciality){
-    this.lastName = lastName;
-    this.firstName = firstName;
+  public Vet(String last_name, String first_name, String speciality){
+    this.last_name = last_name;
+    this.first_name = first_name;
     this.speciality = speciality;
   }
 
   public String getLastName() {
-      return this.lastName;
+      return this.last_name;
   }
 
   public String getFirstName() {
-      return this.firstName;
+      return this.first_name;
   }
 
   public String getSpeciality() {
       return this.speciality;
   }
 
-  public void setLastName(String lastName){
-    this.lastName = lastName;
+  public void setLastName(String last_name){
+    this.last_name = last_name;
   }
 
-  public void setFirstName(String firstName){
-    this.firstName = firstName;
+  public void setFirstName(String first_name){
+    this.first_name = first_name;
   }
-  
+
   public void setSpeciality(String speciality){
     this.speciality = speciality;
   }

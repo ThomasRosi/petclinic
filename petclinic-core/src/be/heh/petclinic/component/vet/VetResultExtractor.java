@@ -9,7 +9,7 @@ import java.sql.SQLException;
 class VetResultExtractor implements ResultSetExtractor<Vet> {
   @Override
   public Vet extractData(ResultSet rs) throws SQLException {
-    Vet vet = new Vet(rs.getString("lastName"), rs.getString("firstName"), rs.getString("speciality"));
+    Vet vet = new Vet(rs.getString("last_name"), rs.getString("first_name"), rs.getString("speciality"));
     return vet;
   }
 }
