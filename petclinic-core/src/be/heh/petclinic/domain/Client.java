@@ -2,26 +2,26 @@ package be.heh.petclinic.domain;
 
 public class Client {
 
-  private String lastName;
-  private String firstName;
+  private String last_name;
+  private String first_name;
   private String address;
   private String email;
-  private String phoneNumber;
+  private String phone_number;
 
-  public Client(String lastName, String firstName, String address, String email, String phoneNumber){
-    this.lastName = lastName;
-    this.firstName = firstName;
+  public Client(String last_name, String first_name, String address, String email, String phone_number){
+    this.last_name = last_name;
+    this.first_name = first_name;
     this.address = address;
     this.email = email;
-    this.phoneNumber = phoneNumber;
+    this.phone_number = phone_number;
   }
 
   public String getLastName() {
-      return this.lastName;
+      return this.last_name;
   }
 
   public String getFirstName() {
-      return this.firstName;
+      return this.first_name;
   }
 
   public String getAddress() {
@@ -33,15 +33,15 @@ public class Client {
   }
 
   public String getPhonenumber() {
-    return this.phoneNumber;
+    return this.phone_number;
   }
 
-  public void setLastName(String lastName) {
-      this.lastName = lastName;
+  public void setLastName(String last_name) {
+      this.last_name = last_name;
   }
 
-  public void setFirstName(String firstName) {
-      this.firstName = firstName;
+  public void setFirstName(String first_name) {
+      this.first_name = first_name;
   }
 
   public void setAddress(String Address) {
@@ -52,8 +52,8 @@ public class Client {
     this.email = email;
   }
 
-  public void setPhonenumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
+  public void setPhoneNumber(String phone_number) {
+    this.phone_number = phone_number;
   }
 
 }

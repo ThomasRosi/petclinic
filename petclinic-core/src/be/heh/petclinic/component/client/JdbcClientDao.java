@@ -16,6 +16,6 @@ class JdbcClientDao {
 
     Collection<Client> getClients(){
         JdbcTemplate select = new JdbcTemplate(datasource);
-        return select.query("SELECT * FROM CLIENTS", new ClientRowMapper());
+        return select.query("SELECT * FROM clients", new ClientRowMapper());
     }
 }

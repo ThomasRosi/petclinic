@@ -16,6 +16,6 @@ class JdbcPetDao {
 
     Collection<Pet> getPets(){
       JdbcTemplate select = new JdbcTemplate(dataSource);
-      return select.query("SELECT * FROM PETS", new PetRowMapper());
+      return select.query("SELECT * FROM pets", new PetRowMapper());
     }
 }
