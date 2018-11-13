@@ -8,6 +8,6 @@ public interface VetComponent{
 
     Collection<Vet> getVets();
 
-    Collection<Vet> getVetsBySpecialty();
+    Collection<Vet> getVetsBySpecialty(String Specialty);
 
 }

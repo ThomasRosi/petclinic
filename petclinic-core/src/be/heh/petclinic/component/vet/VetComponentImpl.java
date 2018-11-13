@@ -31,7 +31,7 @@ class VetComponentImpl implements VetComponent {
     @Override
     public Collection<Vet> getVetsBySpecialty(String specialty){
       try {
-        Collection<Vet> vets = vetDao.getVetsBySpecialty(specialty);
+        Collection<Vet> vets = vetDao.getVets();
         for (Vet vet : vets) {
           if(!vet.getSpecialty().equals(specialty)){
             vets.remove(vet);

@@ -7,12 +7,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.http.ResponseEntity;
 
 import be.heh.petclinic.component.pet.PetComponent;
-import be.heh.petclinic.domain.Pet;
+import be.heh.petclinic.domain.*;
 
 import java.util.List;
 import java.util.Collection;
@@ -34,7 +35,7 @@ public class PetRestController {
 	}
 
 	@RequestMapping("api/v1/petsbyspecies")
-	public ResponseEntity<Collection<Pet>> getPetsBySpecies(@RequestParam(value="species", defaultValue="") String species){
+	public ResponseEntity<Collection<Pet>> getPetsBySpecies(@RequestParam(value="species", defaultValue="none") String species){
 
 		Collection<Pet> pets = petComponent.getPetsBySpecies(species);
 		if(pets.isEmpty()){
@@ -44,7 +45,7 @@ public class PetRestController {
 	}
 
 	@RequestMapping("api/v1/petsbyclient")
-	public ResponseEntity<Collection<Pet>> getPetsByClient(@RequestParam(value="client", defaultValue="") String client){
+	public ResponseEntity<Collection<Pet>> getPetsByClient(@RequestParam(value="client", defaultValue="none") Client client){
 
 		Collection<Pet> pets = petComponent.getPetsByClient(client);
 		if(pets.isEmpty()){
