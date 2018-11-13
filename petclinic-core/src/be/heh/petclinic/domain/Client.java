@@ -4,16 +4,16 @@ public class Client {
 
   private String last_name;
   private String first_name;
+  private String city;
   private String address;
-  private String email;
-  private String phone_number;
+  private String telephone;
 
-  public Client(String last_name, String first_name, String address, String email, String phone_number){
+  public Client(String last_name, String first_name, String address, String city, String telephone){
     this.last_name = last_name;
     this.first_name = first_name;
+    this.city = city;
     this.address = address;
-    this.email = email;
-    this.phone_number = phone_number;
+    this.telephone = telephone;
   }
 
   public String getLastName() {
@@ -28,12 +28,12 @@ public class Client {
       return this.address;
   }
 
-  public String getEmail() {
-    return this.email;
+  public String getCity() {
+      return this.city;
   }
 
-  public String getPhonenumber() {
-    return this.phone_number;
+  public String getTelephone() {
+    return this.telephone;
   }
 
   public void setLastName(String last_name) {
@@ -44,16 +44,16 @@ public class Client {
       this.first_name = first_name;
   }
 
-  public void setAddress(String Address) {
-      this.address = Address;
+  public void setAddress(String address) {
+      this.address = address;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setCity(String city) {
+      this.city = city;
   }
 
-  public void setPhoneNumber(String phone_number) {
-    this.phone_number = phone_number;
+  public void setTelephone(String telephone) {
+    this.telephone = telephone;
   }
 
 }

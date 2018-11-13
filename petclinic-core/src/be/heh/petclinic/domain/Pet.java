@@ -3,36 +3,46 @@ package be.heh.petclinic.domain;
 public class Pet {
 
   private String name;
-  private String owner;
-  private String breed;
+  private String birth_date;
+  private String species;
+  private Client client;
 
-  public Pet(String name, String owner, String breed){
+  public Pet(String name, String birth_date, String species, Client client){
     this.name = name;
-    this.owner = owner;
-    this.breed = breed;
+    this.birth_date = birth_date;
+    this.species = species;
+    this.client = client;
   }
 
   public String getName(){
     return this.name;
   }
 
-  public String getOwner(){
-    return this.owner;
+  public String getBirthDate(){
+    return this.birth_date;
   }
 
-  public String getBreed(){
-    return this.breed;
+  public Client getClient(){
+    return this.client;
+  }
+
+  public String getSpecies(){
+    return this.species;
   }
 
   public void setName(String name){
     this.name = name;
   }
 
-  public void setOwner(String owner){
-    this.owner = owner;
+  public void setBirthDate(String birth_date){
+    this.birth_date = birth_date;
   }
 
-  public void setBreed(String breed){
-    this.breed = breed;
+  public void setClient(Client client){
+    this.client = client;
+  }
+
+  public void setSpecies(String species){
+    this.species = species;
   }
 }

@@ -8,4 +8,8 @@ public interface PetComponent{
 
     Collection<Pet> getPets();
 
+    Collection<Pet> getPetsBySpecies();
+
+    Collection<Pet> getPetsByClient();
+
 }

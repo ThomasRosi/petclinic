@@ -32,4 +32,24 @@ public class PetRestController {
 		}
 		return new ResponseEntity<Collection<Pet>>(pets, HttpStatus.OK);
 	}
+
+	@RequestMapping("api/v1/petsbyspecies")
+	public ResponseEntity<Collection<Pet>> getPetsBySpecies(@RequestParam(value="species", defaultValue="") String species){
+
+		Collection<Pet> pets = petComponent.getPetsBySpecies(species);
+		if(pets.isEmpty()){
+			return new ResponseEntity<Collection<Pet>>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<Collection<Pet>>(pets, HttpStatus.OK);
+	}
+
+	@RequestMapping("api/v1/petsbyclient")
+	public ResponseEntity<Collection<Pet>> getPetsByClient(@RequestParam(value="client", defaultValue="") String client){
+
+		Collection<Pet> pets = petComponent.getPetsByClient(client);
+		if(pets.isEmpty()){
+			return new ResponseEntity<Collection<Pet>>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<Collection<Pet>>(pets, HttpStatus.OK);
+	}
 }

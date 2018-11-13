@@ -33,4 +33,15 @@ public class VetRestController {
 		}
 		return new ResponseEntity<Collection<Vet>>(vets, HttpStatus.OK);
 	}
+
+	@RequestMapping("api/v1/vetsbyspecialty")
+	public ResponseEntity<Collection<Vet>> getVetsBySpecialty(@RequestParam(value="specialty", defaultValue="") String specialty){
+
+		Collection<Vet> vets = vetComponent.getVetsBySpecialty(specialty);
+		if(vets.isEmpty()){
+			return new ResponseEntity<Collection<Vet>>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<Collection<Vet>>(vets, HttpStatus.OK);
+	}
+
 }

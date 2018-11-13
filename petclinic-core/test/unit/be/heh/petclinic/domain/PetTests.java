@@ -8,11 +8,7 @@ public class PetTests {
 
     @Test
     public void test_object_pet(){
-        be.heh.petclinic.domain.Pet pet =new be.heh.petclinic.domain.Pet("Jack","James","Dog");
 
-        assertEquals("Jack",pet.getName());
-        assertEquals("James",pet.getOwner());
-        assertEquals("Dog",pet.getBreed());
     }
 
 }

@@ -24,14 +24,14 @@ class VetComponentImpl implements VetComponent {
         return vets;
       } catch (Exception e) {
         VetException ve = new VetException("Error while loading vets", e);
-        //logError(ve);
         throw ve;
       }
     }
 
+    @Override
     public Collection<Vet> getVetsBySpecialty(String specialty){
       try {
-        Collection<Vet> vets = vetDao.getVets();
+        Collection<Vet> vets = vetDao.getVetsBySpecialty(specialty);
         for (Vet vet : vets) {
           if(!vet.getSpecialty().equals(specialty)){
             vets.remove(vet);
@@ -40,7 +40,6 @@ class VetComponentImpl implements VetComponent {
         return vets;
       } catch (Exception e) {
         VetException ve = new VetException("Error while loading vets", e);
-        //logError(ve);
         throw ve;
       }
     }
