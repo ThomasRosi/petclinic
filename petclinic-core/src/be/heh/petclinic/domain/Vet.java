@@ -9,7 +9,7 @@ public class Vet {
   public Vet(String last_name, String first_name, String specialty){
     this.last_name = last_name;
     this.first_name = first_name;
-    this.speciality = specialty;
+    this.specialty = specialty;
   }
 
   public String getLastName() {
@@ -20,8 +20,8 @@ public class Vet {
       return this.first_name;
   }
 
-  public String getSpeciality() {
-      return this.speciality;
+  public String getSpecialty() {
+      return this.specialty;
   }
 
   public void setLastName(String last_name){
@@ -32,7 +32,7 @@ public class Vet {
     this.first_name = first_name;
   }
 
-  public void setSpecialty(String speciality){
+  public void setSpecialty(String specialty){
     this.specialty = specialty;
   }
 }

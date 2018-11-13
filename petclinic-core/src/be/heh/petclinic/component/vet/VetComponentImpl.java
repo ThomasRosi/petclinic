@@ -29,7 +29,6 @@ class VetComponentImpl implements VetComponent {
       }
     }
 
-    @Override
     public Collection<Vet> getVetsBySpecialty(String specialty){
       try {
         Collection<Vet> vets = vetDao.getVets();
