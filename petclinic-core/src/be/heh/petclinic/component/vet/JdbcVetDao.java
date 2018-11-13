@@ -16,6 +16,6 @@ class JdbcVetDao {
 
   Collection<Vet> getVets(){
     JdbcTemplate select = new JdbcTemplate(dataSource);
-    return select.query("SELECT * FROM vets", new VetRowMapper());
+    return select.query("SELECT v.first_name, v.last_name, s.name FROM vets AS v JOIN vet_specialties AS vs ON (v.id = vs.vet_id) JOIN specialties AS s ON (s.id = vs.specialty_id)", new VetRowMapper());
   }
 }

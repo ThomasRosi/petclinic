@@ -19,9 +19,25 @@ class VetComponentImpl implements VetComponent {
 
     @Override
     public Collection<Vet> getVets() {
-      
       try {
         Collection<Vet> vets = vetDao.getVets();
+        return vets;
+      } catch (Exception e) {
+        VetException ve = new VetException("Error while loading vets", e);
+        //logError(ve);
+        throw ve;
+      }
+    }
+
+    @Override
+    public Collection<Vet> getVetsBySpecialty(String specialty){
+      try {
+        Collection<Vet> vets = vetDao.getVets();
+        for (Vet vet : vets) {
+          if(!vet.getSpecialty().equals(specialty)){
+            vets.remove(vet);
+          }
+        }
         return vets;
       } catch (Exception e) {
         VetException ve = new VetException("Error while loading vets", e);
