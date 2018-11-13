@@ -11,4 +11,4 @@ CREATE TABLE IF NOT EXISTS pets (
     clients_id INT(4) UNSIGNED NOT NULL,
     INDEX(name),
     FOREIGN KEY (clients_id) REFERENCES clients(id)
-) engine=InnoDB; 
+)engine=InnoDB; 
