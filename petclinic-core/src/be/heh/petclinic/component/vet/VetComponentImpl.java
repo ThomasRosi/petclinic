@@ -32,12 +32,13 @@ class VetComponentImpl implements VetComponent {
     public Collection<Vet> getVetsBySpecialty(String specialty){
       try {
         Collection<Vet> vets = vetDao.getVets();
+        Collection<Vet> response = new ArrayList<Vet>();
         for (Vet vet : vets) {
-          if(!vet.getSpecialty().equals(specialty)){
-            vets.remove(vet);
+          if(vet.getSpecialty().toString().equals(specialty)){
+            response.add(vet);
           }
         }
-        return vets;
+        return response;
       } catch (Exception e) {
         VetException ve = new VetException("Error while loading vets", e);
         throw ve;
