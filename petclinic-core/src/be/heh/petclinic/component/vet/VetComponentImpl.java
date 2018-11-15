@@ -45,3 +45,7 @@ class VetComponentImpl implements VetComponent {
       }
     }
 }
+// Pour les doublon faire des array list pour specialties
+// boucles foreach pour check les doublons dans la collection vets
+//Supprimer les doublon de la Collection
+//Concatenner la specialty du doublon avec l'originel
