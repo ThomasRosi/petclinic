@@ -32,12 +32,13 @@ class PetComponentImpl implements PetComponent {
     public Collection<Pet> getPetsBySpecies(String species){
       try{
         Collection<Pet> pets = petDao.getPets();
+        Collection<Pet> response = new ArrayList<Pet>();
         for (Pet pet : pets) {
-          if(!pet.getSpecies().equals(species)){
-            pets.remove(pet);
+          if(pet.getSpecies().toString().equals(species)){
+            response.add(pet);
           }
         }
-        return pets;
+        return response;
       } catch (Exception e){
         PetException pe = new PetException("Error while loading pets", e);
         throw pe;
@@ -45,15 +46,16 @@ class PetComponentImpl implements PetComponent {
     }
 
     @Override
-    public Collection<Pet> getPetsByClient(Client client){
+    public Collection<Pet> getPetsByClient(int client_id){
       try{
-        Collection<Pet> pets = petDao.getPets();
+        Collection<Pet> pets = petDao.getPetsClientID(client_id);
+        Collection<Pet> response = new ArrayList<Pet>();
         for (Pet pet : pets) {
-          if(!pet.getClient().equals(client)){
-            pets.remove(pet);
+          if(pet.getClient().getClientID().equals(client_id)){
+            response.add(pet);
           }
         }
-        return pets;
+        return response;
       } catch (Exception e){
         PetException pe = new PetException("Error while loading pets", e);
         throw pe;

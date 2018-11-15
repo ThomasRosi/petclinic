@@ -45,7 +45,7 @@ public class PetRestController {
 	}
 
 	@RequestMapping("api/v1/petsbyclient")
-	public ResponseEntity<Collection<Pet>> getPetsByClient(@RequestParam(value="client", defaultValue="none") Client client){
+	public ResponseEntity<Collection<Pet>> getPetsByClient(@RequestParam(value="client", defaultValue="none") int client){
 
 		Collection<Pet> pets = petComponent.getPetsByClient(client);
 		if(pets.isEmpty()){

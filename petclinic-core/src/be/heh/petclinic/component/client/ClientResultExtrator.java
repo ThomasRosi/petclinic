@@ -9,7 +9,7 @@ import java.sql.SQLException;
 class ClientResultExtrator implements ResultSetExtractor<Client>{
     @Override
     public  Client extractData(ResultSet rs) throws SQLException {
-        Client client = new Client(rs.getString("lastName"),rs.getString("firstName"),rs.getString("address"),rs.getString("email"),rs.getString("phoneNumber"));
+        Client client = new Client(rs.getInt("id"),rs.getString("last_name"),rs.getString("first_name"),rs.getString("address"),rs.getString("city"),rs.getString("telephone"));
         return client;
     }
 }

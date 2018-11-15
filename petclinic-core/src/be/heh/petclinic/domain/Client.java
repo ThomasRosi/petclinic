@@ -2,18 +2,24 @@ package be.heh.petclinic.domain;
 
 public class Client {
 
+  private Integer client_id;
   private String last_name;
   private String first_name;
   private String city;
   private String address;
   private String telephone;
 
-  public Client(String last_name, String first_name, String address, String city, String telephone){
+  public Client(Integer client_id,String last_name, String first_name, String address, String city, String telephone){
+    this.client_id = client_id;
     this.last_name = last_name;
     this.first_name = first_name;
     this.city = city;
     this.address = address;
     this.telephone = telephone;
+  }
+
+  public Integer getClientID(){
+      return this.client_id;
   }
 
   public String getLastName() {
@@ -34,6 +40,10 @@ public class Client {
 
   public String getTelephone() {
     return this.telephone;
+  }
+
+  public void setClientID(Integer client_id){
+      this.client_id = client_id;
   }
 
   public void setLastName(String last_name) {

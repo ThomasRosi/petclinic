@@ -16,6 +16,12 @@ class JdbcPetDao {
 
     Collection<Pet> getPets(){
       JdbcTemplate select = new JdbcTemplate(dataSource);
-      return select.query("SELECT p.name, p.birth_date, p.species, c.* FROM pets AS p JOIN client AS c ON (p.client_id = c.id)", new PetRowMapper());
+      return select.query("SELECT p.name, p.birth_date, p.species, c.* FROM pets AS p JOIN clients AS c ON (p.clients_id = c.id)", new PetRowMapper());
+    }
+
+    Collection<Pet> getPetsClientID(int client_id){
+      JdbcTemplate select = new JdbcTemplate(dataSource);
+      return select.query("SELECT p.name, p.birth_date, p.species, c.* FROM pets AS p JOIN clients AS c ON (p.clients_id = "+client_id+")", new PetRowMapper());
+      
     }
 }

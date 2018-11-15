@@ -10,6 +10,6 @@ public interface PetComponent{
 
     Collection<Pet> getPetsBySpecies(String species);
 
-    Collection<Pet> getPetsByClient(Client client);
+    Collection<Pet> getPetsByClient(int client_id);
 
 }
