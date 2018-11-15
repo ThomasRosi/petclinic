@@ -8,8 +8,18 @@ export default class Home extends Component {
     return (
       <Grid>
         <Jumbotron>
-          <h2>Welcome in petclinic</h2>
-          <p>This is how to build a website with react, react-router & react-bootstrap</p>
+          <h2>Welcome in PetClinic</h2>
+          <h3>Description :</h3>
+          <p>School project created to learn good architecture and some technologies (Java, Spring, Gradle, React).</p>
+          <h3>Contributors :</h3>
+          <p>
+            <ul>
+              <li><a href="https://github.com/Loukourou">Guillaume Isembaert</a></li>
+              <li><a href="https://github.com/thib050697">Thibault Stevanoni</a></li>
+              <li><a href="https://github.com/ThomasRosi">Thomas Rosi</a></li>
+              <li><a href="https://github.com/Dexnaw">Arnaud Urbain</a></li>
+            </ul>
+          </p>
         </Jumbotron>
       </Grid>
     )
