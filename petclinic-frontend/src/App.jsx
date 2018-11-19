@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Vets from './components/Vets';
-import Pets from './components/Pets';
-import Clients from './components/Clients';
-import Navbar from './components/Navbar';
+import Home from './components/Home/Home';
+import Vets from './components/Vets/Vets';
+import Pets from './components/Pets/Pets';
+import Clients from './components/Clients/Clients';
+import Navbar from './components/Navbar/Navbar';
 
 class App extends Component {
   render() {

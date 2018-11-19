@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
+import { Grid, Row } from 'react-bootstrap';
 import Vet from './Vet'
 
 export default class Vets extends Component {
@@ -16,7 +16,7 @@ export default class Vets extends Component {
     this.getVets().then((response) => {
       let vets = []
       response.data.forEach(vet => {
-        vets.push(<Vet key={vet.last_name} {...vet}/>)
+        vets.push(<Vet key={vet.lastName} {...vet}/>)
       });
       this.setState({vets})
     })

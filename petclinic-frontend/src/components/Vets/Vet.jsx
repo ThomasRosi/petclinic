@@ -1,13 +1,13 @@
 import React from 'react'
-import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
+import { Jumbotron, Col } from 'react-bootstrap';
 
-const Vet = ({last_name, first_name, specialty}) => {
+const Vet = ({lastName, firstName, specialty}) => {
   return (
-      <Col xs={6} sm={3} className="person-wrapper">
+      <Col xs={12} sm={4} className="person-wrapper">
         <Jumbotron>
           <img src="assets/doctor.png" alt="List vets"/>
           <div>
-            <h3>{last_name + ' ' + first_name}</h3>
+            <h3>{lastName + ' ' + firstName}</h3>
             <h4>{specialty}</h4>
           </div>
         </Jumbotron>
