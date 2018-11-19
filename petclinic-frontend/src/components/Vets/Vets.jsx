@@ -17,13 +17,13 @@ export default class Vets extends Component {
       let vets = []
       response.data.forEach(vet => {
         vets.push(<Vet key={vet.lastName} {...vet}/>)
-      });
+      })
       this.setState({vets})
     })
   }
 
   componentWillMount(){
-    this.setVets();
+    this.setVets()
   }
 
   render() {
@@ -35,4 +35,5 @@ export default class Vets extends Component {
       </Grid>
     )
   }
+  
 }

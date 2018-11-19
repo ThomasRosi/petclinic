@@ -1,18 +1,20 @@
 import React from 'react'
 import { Jumbotron, Col } from 'react-bootstrap';
 
-const Vet = ({lastName, firstName, specialty}) => {
+const Client = ({lastName, firstName, address, city, telephone}) => {
   return (
       <Col xs={12} sm={4} className="person-wrapper">
         <Jumbotron>
-          <img src="assets/doctor.png" alt="Vet"/>
+          <img src="assets/client.png" alt="Client"/>
           <div>
             <h3>{lastName + ' ' + firstName}</h3>
-            <h4>{specialty}</h4>
+            <h4>{telephone}</h4>
+            <div>{address}</div>
+            <div>{city}</div>
           </div>
         </Jumbotron>
       </Col>
   )
 }
 
-export default Vet
+export default Client
