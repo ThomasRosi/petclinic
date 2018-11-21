@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 export default class Menu extends Component {
   render() {
@@ -8,7 +9,9 @@ export default class Menu extends Component {
       <Navbar default collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/">PetClinic</Link>
+            <Link to="/">
+              PetClinic
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>

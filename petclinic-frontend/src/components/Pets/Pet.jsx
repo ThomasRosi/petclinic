@@ -11,8 +11,6 @@ const Pet = ({name, birthDay, species, client}) => {
                 return <img src="assets/dog.png" alt="Dog"/>;
               case "Chat" :
                 return <img src="assets/cat.png" alt="Cat"/>;
-              case "Cheval" :
-                return <img src="assets/horse.png" alt="Horse"/>;
               default:
                 return <img src="assets/pawprint.png" alt="Animal"/>;
             }
