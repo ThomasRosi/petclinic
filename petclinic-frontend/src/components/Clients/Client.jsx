@@ -7,7 +7,7 @@ const Client = ({lastName, firstName, address, city, telephone}) => {
         <Jumbotron>
           <img src="assets/client.png" alt="Client"/>
           <div>
-            <h3>{lastName + ' ' + firstName}</h3>
+            <h3>{firstName + ' ' + lastName}</h3>
             <h4>{telephone}</h4>
             <div>{address}</div>
             <div>{city}</div>
