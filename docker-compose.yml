@@ -1,0 +1,38 @@
+version: '3'
+services:
+  db:
+    image: mariadb
+    container_name: petclinic_db
+    restart: always
+    networks:
+      - backend
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_520_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: petclinic
+      MYSQL_DATABASE: liquibase_petclinic
+      MYSQL_USER: petclinic
+      MYSQL_PASSWORD: petclinic
+    ports:
+      - 7000:3306
+
+  phpmyadmin:
+    hostname: phpmyadmin
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: petclinic
+      MYSQL_USER: petclinic
+      MYSQL_PASSWORD: petclinic
+    networks:
+      - backend
+      - frontend
+    links:
+      - db:db
+    depends_on:
+      - db
+    ports:
+      - 7002:80
+
+networks:
+  backend:
+  frontend:

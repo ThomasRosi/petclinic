@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class VetTests {
+public class ClientTests {
 
     @Test
-    public void test_object_vet(){
+    public void test_object_client(){
 
     }
 

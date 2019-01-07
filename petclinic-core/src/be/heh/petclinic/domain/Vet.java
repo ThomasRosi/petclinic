@@ -1,45 +1,41 @@
 package be.heh.petclinic.domain;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
-import javax.validation.constraints.NotEmpty;
+import java.util.ArrayList;
 
-@MappedSuperclass
-public class Person extends BaseEntity {
+public class Vet {
 
-    @Column(name = "first_name")
-    @NotEmpty
-    private String firstName;
+  private String last_name;
+  private String first_name;
+  private String specialty;
+  //private ArrayList<String> specialty;
 
-    @Column(name = "last_name")
-    @NotEmpty
-    private String lastName;
+  public Vet(String last_name, String first_name, String specialty){
+    this.last_name = last_name;
+    this.first_name = first_name;
+    this.specialty = specialty;
+  }
 
-    @Column(name = "speciality")
-    @NotEmpty
-    private String speciality;
+  public String getLastName() {
+      return this.last_name;
+  }
 
-    public String getFirstName() {
-        return this.firstName;
-    }
+  public String getFirstName() {
+      return this.first_name;
+  }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+  public String getSpecialty() {
+      return this.specialty;
+  }
 
-    public String getLastName() {
-        return this.lastName;
-    }
+  public void setLastName(String last_name){
+    this.last_name = last_name;
+  }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+  public void setFirstName(String first_name){
+    this.first_name = first_name;
+  }
 
-    public String getSpeciality() {
-        return this.speciality;
-    }
-
-    public void setSpeciality(String speciality) {
-        this.speciality = speciality;
-    }
+  public void setSpecialty(String specialty){
+    this.specialty = specialty;
+  }
 }
