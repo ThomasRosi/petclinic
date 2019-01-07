@@ -6,6 +6,7 @@ import Vets from './components/Vets/Vets';
 import Pets from './components/Pets/Pets';
 import Clients from './components/Clients/Clients';
 import Navbar from './components/Navbar/Navbar';
+import Appointments from './components/Appointments/Appointments'
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route path="/Vets" component={Vets} />
           <Route path="/Pets" component={Pets} />
           <Route path="/Clients" component={Clients} />
+          <Route path="/Appointments" component={Appointments} />
         </div>
       </Router>
     )

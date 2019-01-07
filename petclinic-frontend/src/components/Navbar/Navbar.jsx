@@ -29,6 +29,9 @@ export default class Menu extends Component {
             <NavItem eventKey={4} componentClass={Link} href="/clients" to="/clients">
               Clients
             </NavItem>
+            <NavItem eventKey={5} componentClass={Link} href="/appointments" to="/appointments">
+              Appointments
+            </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

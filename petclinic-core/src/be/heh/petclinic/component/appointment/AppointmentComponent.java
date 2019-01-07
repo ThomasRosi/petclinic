@@ -7,6 +7,7 @@ import java.util.Collection;
 public interface AppointmentComponent {
 
     Collection<Appointment> getAppointments();
+    Appointment getById(int id);
     Collection<Appointment> getAppointmentByVet(String vet_last_name);
     Collection<Appointment> getAppointmentByPet(String pet_name);
 }

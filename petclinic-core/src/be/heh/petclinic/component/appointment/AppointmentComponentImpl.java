@@ -26,6 +26,16 @@ public class AppointmentComponentImpl implements AppointmentComponent {
     }
 
     @Override
+    public Appointment getById(int id) {
+        try {
+            return appointmentDao.getById(id);
+        } catch (Exception e) {
+            AppointmentException ae = new AppointmentException("Error while loading appointments", e);
+            throw ae;
+        }
+    }
+
+    @Override
     public Collection<Appointment> getAppointmentByVet(String vet_last_name) {
         try {
             Collection<Appointment> appointments = appointmentDao.getAppointments();

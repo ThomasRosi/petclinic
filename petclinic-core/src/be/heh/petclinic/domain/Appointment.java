@@ -5,20 +5,30 @@ import java.time.LocalDateTime;
 
 public class Appointment {
 
+    private int appointment_id;
     private Pet pet;
     private Vet vet;
     private Date visit_date;
     private int visit_duration;
     private String description;
 
-    public Appointment(Pet pet, Vet vet,
+    public Appointment(int appointment_id,Pet pet, Vet vet,
                        Date visit_date,
                        int visit_duration, String description) {
+        this.appointment_id = appointment_id;
         this.pet = pet;
         this.vet = vet;
         this.visit_date = visit_date;
         this.visit_duration = visit_duration;
         this.description = description;
+    }
+
+    public int getAppointment_id() {
+        return appointment_id;
+    }
+
+    public void setAppointment_id(int appointment_id) {
+        this.appointment_id = appointment_id;
     }
 
     public Pet getPet() {
