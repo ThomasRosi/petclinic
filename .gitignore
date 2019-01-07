@@ -16,3 +16,5 @@ gradle-app.setting
 .gradletasknamecache
 /.settings
 /.gradle
+.idea
+package-lock.json
